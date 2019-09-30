@@ -1,0 +1,253 @@
+body {
+    background: #f3f3f3;
+}
+
+#wanted_wrap {
+    background: #f3f3f3;
+}
+
+.sign_wrap {
+    background: #fdf8e3;
+    height: 38px;
+    border-top: solid 1px #ffe7b8;
+    border-bottom: solid 1px #ffe7b8;
+    margin: 15px 0;
+}
+
+.sign_wrap .sign {
+    background: #fdf8e3;
+    height: 38px;
+    text-align: center;
+}
+
+.sign_wrap .sign a {
+    display: inline-block;
+    font-size: 14px;
+    color: #b05a2e;
+    line-height: 38px;
+
+
+}
+
+.wbg_wrap {
+    height: 240px;
+    background: url(../images/wbg.jpg) no-repeat center top;
+    margin-bottom: 15px;
+}
+
+.wbg {
+    height: 240px;
+    background: url(../images/wbg.jpg) no-repeat center top;
+}
+
+.wleft {
+    width: 249px;
+    /* height: 1404px; */
+    border: solid 1px #dcdcdc;
+    background: white;
+    padding: 0 0 0 14px;
+    float: left;
+
+}
+
+.wleft ul li {
+    padding: 8px 0 0 0;
+}
+
+.wleft ul li p {
+    font-size: 18px;
+    color: #53cac3;
+    line-height: 46px;
+}
+
+.wleft ul li a {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 20px;
+    line-height: 30px;
+    color: #999999;
+}
+
+.wright {
+    float: left;
+    width: 876px;
+    margin-left: 15px;
+}
+
+.wright .search {
+    width: 889px;
+    height: 56px;
+    border: solid 1px #e0e0e0;
+    background: white;
+    margin-bottom: 5px;
+}
+
+.wright .search .txt {
+    border: 0;
+    width: 758px;
+    height: 45px;
+    float: left;
+    line-height: 45px;
+    color: #d6d8e1;
+    font-style: oblique;
+    font-size: 20px;
+    margin: 5px 0;
+    padding-left: 17px;
+    font-family: "微软雅黑", Arial;
+}
+
+.wright .search .sub {
+    border: 0;
+    width: 104px;
+    height: 45px;
+    background: #53cac3;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    font-family: "微软雅黑", Arial;
+    float: right;
+    margin: 5px 5px 5px 0;
+}
+
+.wright .scontent {
+    width: 861px;
+    height: 104px;
+    border: solid 1px #e0e0e0;
+    background: white;
+    margin-top: 15px;
+    padding: 16px 14px 7px;
+}
+
+.wright .scontent .scleft {
+    width: 586px;
+    height: 104px;
+    float: left;
+}
+
+.wright .scontent .scleft h3 {
+    font-size: 20px;
+    line-height: 38px;
+    color: black;
+}
+
+.wright .scontent .scleft .salary {
+    display: block;
+    font-size: 18px;
+    line-height: 34px;
+    color: #e85253;
+    margin-bottom: 12px;
+
+}
+
+.wright .scontent .scleft .place {
+    font-size: 14px;
+    line-height: 20px;
+    color: #656565;
+    padding: 0 8px 0 0;
+}
+
+.wright .scontent .scleft .workyear {
+    font-size: 14px;
+    line-height: 20px;
+    color: #656565;
+    padding: 0 8px;
+}
+
+.wright .scontent .scleft .eb {
+    font-size: 14px;
+    line-height: 20px;
+    color: #656565;
+    padding: 0 8px;
+}
+
+.wright .scontent .scright {
+    width: 275px;
+    height: 104px;
+    float: left;
+    color: #a7a7a7;
+}
+
+.wright .scontent .scright .pic {
+    float: right;
+    width: 275px;
+    height: 50px;
+    text-align: right;
+}
+
+.wright .scontent .scright .pername {
+    float: right;
+    width: 275px;
+    text-align: right;
+    line-height: 36px;
+}
+
+.wright .scontent .scright .info {
+    float: right;
+    width: 275px;
+    line-height: 20px;
+}
+
+.wright .scontent .scright .info .comp {
+    float: right;
+    margin: 0 10px;
+}
+
+.wright .scontent .scright .info .job {
+    float: right;
+    margin: 0 10px;
+}
+
+.wright .scontent .scright .info .online {
+    float: right;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    background: #6bd52c;
+    color: white;
+    text-align: center;
+}
+
+.bar02 {
+    *zoom: 1;
+    position: relative;
+}
+
+.bar02:after {
+    content: " ";
+    width: 2px;
+    height: 18px;
+    position: absolute;
+    background: #ececf2;
+    top: 1px;
+    right: -6px;
+}
+.wright .scontentb {
+    width: 861px;
+    height: 104px;
+    border: solid 1px #e0e0e0;
+    background: #fdf9e5;
+    margin: 15px 0;
+    padding: 16px 14px 7px;
+}
+.wright .scontentb .bleft{
+    float: left;
+    font-size: 20px;
+    color: #53cac3;
+    line-height: 104px;
+}
+.wright .scontentb img{
+    float: right;
+    margin-top: 15px;
+}
+.wright .scontentb .bright{
+    float: right;
+    font-size: 20px;
+    color: #53cac3;
+    text-align: right;
+    padding-top: 26px;
+    padding-right: 12px;
+}
+.wright .scontentb .bleft span{
+    color:#f89a28;
+}

@@ -1,0 +1,30 @@
+{
+    "pagenum":5,
+    "data":[
+        {
+            "title":"网页验证码是干嘛的，是为了解决什么安全问题?",
+            "content":"区分用户是计算机还是人的公共全自动程序。可以防止恶意破解密码、刷票、论坛灌水有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试",
+            "writer":"鸿蒙"
+        },
+        {
+            "title":"你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么??",
+            "content":"IE: trident内核Firefox：gecko内核Safari:webkit内核Opera:以前是presto内核，Opera现已改用Google - Chrome的Blink内核Chrome:Blink(基于webkit，Google与Opera Software共同开发)",
+            "writer":"MIUI"
+        },
+        {
+            "title":"你能描述一下渐进增强和优雅降级之间的不同吗?",
+            "content":"渐进增强：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。优雅降级：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。",
+            "writer":"windows"
+        },
+        {
+            "title":"为什么利用多个域名来存储网站资源会更有效？?",
+            "content":"CDN缓存更方便 突破浏览器并发限制节约cookie带宽节约主域名的连接数，优化页面响应速度防止不必要的安全问题",
+            "writer":"apple"
+        },
+        {
+            "title":"简述一下src与href的区别?",
+            "content":"src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素",
+            "writer":"ubuntu"
+        }
+    ]
+}

@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="梦幻西游，梦幻西游2，梦幻西游电脑版，技能，召唤兽技能，宝宝技能，神兽技能" />
+    <meta name="description" content="下面帅编就对十年前的宝宝图鉴技能页面做一次翻新迭代，力求大家绕过认知岔路，再也不用争个面红耳赤了!" />
+    <title>告别迷糊！召唤兽技能查询器_叶子猪梦幻西游电脑版</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--全站通用导航{-->
+    <p>
+<link rel="stylesheet" href="http://www.yzz.cn/home/theme/v3/css/topbar.css" /></p>
+<div id="yzz-topbar">
+<div class="g-topbar-box cf"><!-- 导航列表 -->
+<div class="topbar-nav-list">
+<ul>
+                <li><a href="http://www.yzz.cn/" target="_blank">
+                    <p><i class="tobar-icon-h">&nbsp;</i>                         <span>叶子猪首页</span></p>
+                </a></li>
+                <li>
+                    <p><!--<i class="tobar-icon-triangle">&nbsp;</i>--><!--<i class="tobar-icon-qr">&nbsp;</i>--><i><img src="http://www.yzz.cn/common/img/anlianli/game_s_white.png" width="18" height="18" alt="" /></i>                        <a href="http://app.yzz.cn" target="_blank"><span>游戏下载</span></a></p>
+                    <!--<p><img src="http://www.yzz.cn/common/img/anlianli/qr.png" alt="安哩安哩二维码" />                         <span>扫码下载热门游戏</span></p>--></li>
+                <li><a href="http://app.yzz.cn/category/1000" target="_blank">
+                    <p><i><img src="http://www.yzz.cn/common/img/crown.png" width="20" alt="" /></i>                        <span>游戏排行榜</span></p>
+                </a>
+                </li>
+                <li>
+                    <a href="http://card.yzz.cn/" target="_blank">
+                        <p><i><img src="http://www.yzz.cn/common/img/gifts.png" width="16" alt="" /></i>                        <span>礼包领取</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://tools.yzz.cn/" target="_blank">
+                    <p><i><img src="http://www.yzz.cn/common/img/txzs-logo.png" width="16" alt="" /></i><span>腾讯手游助手</span></p>
+                </a></li>
+                <li>
+                    <p><i class="tobar-icon-triangle">&nbsp;</i>                         <i class="tobar-icon-wx">&nbsp;</i>                         <span>关注微信</span></p>
+                    <div class="qr-wrap">
+                        <div class="item">
+                            <img src="http://game.yzz.cn/assets/web/img/wx_qr.jpg" alt="叶子猪公众号二维码" />
+                            <span>扫码关注微信公众号</span>
+                        </div>
+                        <div class="item">
+                            <img src="http://common.yzz.cn/img/fwh-qr.jpg" alt="叶子猪服务号二维码" />
+                            <span>扫码关注领福利</span>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="http://bbs.yzz.cn/" target="_blank">
+                    <p><i class="tobar-icon-bbs">&nbsp;</i>                         <span>玩家论坛</span></p>
+                </a></li>
+            </ul>
+</div>
+<!-- 导航列表END -->
+<div id="account-wrap"><!--登录之前-->
+<div id="yzz-login-reg"><span class="face-gif"><img src="http://game.yzz.cn/assets/web/img/hj.gif" alt="叶子猪" /></span>                 <a href="javascript:void(0);" id="pprt-login" target="_self">登录</a>                 <a href="javascript:void(0);" id="pprt-reg" target="_self">注册</a></div>
+<!--登录之后-->
+<div id="yzz-logined-box">
+<div class="username"><span class="face-gif"><img src="http://game.yzz.cn/assets/web/img/hj.gif" alt="叶子猪" /></span>                     <span id="yzz_nickname">&nbsp;</span><i>&nbsp;</i></div>
+<div class="usermenu">
+<div class="userhead cf">
+<div class="userimg"><a href="http://bbs.yzz.cn/home.php?mod=spacecp&amp;ac=avatar" target="_blank">                                 <img src="http://bbs.yzz.cn/uc_server/avatar.php?uid=10165283&amp;size=middl" alt="" />                             </a></div>
+<div class="usertheme">
+<p class="nickname"><i>&nbsp;</i>                                 <span id="yzz_theme_nickname">&nbsp;</span></p>
+<p class="userid"><i>&nbsp;</i>                                 <span id="userid">&nbsp;</span></p>
+<p class="usertip cf"><a href="http://bbs.yzz.cn/home.php?mod=space&amp;do=pm" target="_blank">                                     <i>&nbsp;</i>                                     <span>消息<b id="new_pm">(0)</b></span>                                 </a>                                 <a href="http://bbs.yzz.cn/home.php?mod=space&amp;do=notice" target="_blank">                                     <i>&nbsp;</i>                                     <span>提醒<b id="new_notice">(0)</b></span>                                 </a></p>
+</div>
+</div>
+<div class="usertask" id="usertask">
+<h2>进行中的任务</h2>
+<ul id="uib-m">&nbsp;</ul>
+    </div>
+    <div class="usertool cf"><a href="http://passport.yzz.cn/index.php/member/index" target="_blank">账号设置</a>                         <a href="javascript:void(0);" id="c_exit" target="_self">退出登录</a></div>
+    </div>
+    </div>
+    </div>
+    <!-- 全站精选 -->
+    <div class="topbar-all-link"><a href="http://www.yzz.cn/sitemap.html" target="_blank">                 全站地图             </a></div>
+    <!-- 全站精选END --></div>
+    </div>
+<script type="text/javascript" src="http://passport.yzz.cn/public/login_box/js/login_reg.min.js?v3" charset="UTF-8"></script>     <script src="http://www.yzz.cn/home/theme/v3/js/topbar.js"></script> <script type="text/javascript" charset="gb2312" src="http://yktj.yzz.cn/htmldata/mds/yzz_single_gg.js"></script>     <script type="text/javascript" charset="gb2312" src="http://yktj.yzz.cn/c/c.js"></script>  
+    <!--全站通用导航}-->
+    <div class="page">
+        <div class="header">
+            <img src="img/bg-top.jpg" class="head">
+            <div class="nav">
+                <a href="http://xyq.yzz.cn/" target="_blank">专区首页</a>
+                <a href="http://xyq.yzz.cn/special/jn/" target="_blank">旧版页面</a>
+                <a href="http://bbs.yzz.cn/forum.php?gid=20" target="_blank">火爆论坛</a>
+            </div>
+        </div>
+        <div class="content">
+            <p class="description">低级技能、高级技能、特殊技能、稀有技能.....在面对各类描述时不少猪友总会犯迷糊，下面帅编就对十年前的老页面来做一次翻新迭代，力求大家绕过认知岔路，再也不用争个面红耳赤了！</p>
+            <div class="tab main">
+                <div class="btns">
+                    <a href="javascript:;" class="ml0 tab-item">初级技能</a>
+                    <a href="javascript:;" class="tab-item">弱点技能</a>
+                    <a href="javascript:;" class="tab-item">高级技能</a>
+                    <a href="javascript:;" class="tab-item">特殊技能</a>
+                </div>
+                <div class="target tab-target">
+                    <h2>召唤兽初级技能列表</h2>
+                    <table>
+                        <tr>
+                            <th width="128">图标</th>
+                            <th width="150">名称</th>
+                            <th>效果</th>
+                            <th width="240">描述</th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/1.jpg" alt=""></td>
+                            <td>反击</td>
+                            <td>受到物理攻击时有30%几率自动反击，反击伤害为正常伤害的50%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/2.jpg" alt=""></td>
+                            <td>反震</td>
+                            <td>受到物理攻击时有30%几率给予对方反震，反震伤害为所受伤害的25%，避免被敌人连击。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/3.jpg" alt=""></td>
+                            <td>吸血</td>
+                            <td>物理攻击时，吸取对方所掉气血的25%, 如果对方有异常状态，吸血后会中毒，攻击鬼魂类怪物时无效</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/4.jpg" alt=""></td>
+                            <td>连击</td>
+                            <td>45%的几率连续两次物理攻击，拥有此技能物理攻击效果会降低25%，如果对方有反震技能，只能攻击一次</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/5.jpg" alt=""></td>
+                            <td>飞行</td>
+                            <td>躲避能力增加20%，躲避率增加5%，物理攻击命中增加20%，但受暗器攻击时伤害会增加30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/6.jpg" alt=""></td>
+                            <td>夜战</td>
+                            <td>具备夜战能力，不受夜间攻击能力下降的影响（无夜战者夜间伤害将减少20%）</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/7.jpg" alt=""></td>
+                            <td>隐身</td>
+                            <td>自动附加地府修罗隐身法术2～3回合，拥有此技能物理攻击能力会降低20%，隐身状态下无法使用法术</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/8.jpg" alt=""></td>
+                            <td>感知</td>
+                            <td>可以破解地府的修罗隐身、女儿村的楚楚可怜法术效果</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/9.jpg" alt=""></td>
+                            <td>再生</td>
+                            <td>战斗中每回合自动恢复(自身等级/2)的气血</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/10.jpg" alt=""></td>
+                            <td>冥思</td>
+                            <td>战斗中每回合自动恢复(自身等级/4)的魔法</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/11.jpg" alt=""></td>
+                            <td>慧根</td>
+                            <td>使用法术时所消耗的魔法降低为正常的75%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/12.jpg" alt=""></td>
+                            <td>必杀</td>
+                            <td>物理攻击时的必杀几率增加10%，出现必杀时伤害结果会加倍</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/13.jpg" alt=""></td>
+                            <td>幸运</td>
+                            <td>不会受到必杀攻击</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/14.jpg" alt=""></td>
+                            <td>神迹</td>
+                            <td>每回合结束时自动解除一切异常状态</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/15.jpg" alt=""></td>
+                            <td>招架</td>
+                            <td>15%的几率完全躲过敌人的物理攻击</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/16.jpg" alt=""></td>
+                            <td>永恒</td>
+                            <td>受到的辅助类法术效果持续回合加倍，如恢复气血、提升速度等</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/17.jpg" alt=""></td>
+                            <td>敏捷</td>
+                            <td>提升自身速度的10%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/18.jpg" alt=""></td>
+                            <td>强力</td>
+                            <td>增加(自身等级×0.4)的攻击，如果对方有防御或高级防御技能，伤害结果会减少20%；攻击有招架的敌人时不会减少伤害结果</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/19.jpg" alt=""></td>
+                            <td>防御</td>
+                            <td>增加(自身等级×0.6)的防御，但法术伤害能力会降低10%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/20.jpg" alt=""></td>
+                            <td>偷袭</td>
+                            <td>身手灵敏，不会受到反击和反震。攻击效果增加5%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/21.jpg" alt=""></td>
+                            <td>毒</td>
+                            <td>物理攻击时有15%的几率使敌人中毒，中毒后每回合减少10%的气血和5%的魔法</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/22.jpg" alt=""></td>
+                            <td>驱鬼</td>
+                            <td>对鬼魂类怪物的物理、法术伤害效果增加50%，如果将鬼魂类怪物打死，对方将飞出场外而不能复活</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/23.jpg" alt=""></td>
+                            <td>鬼魂术</td>
+                            <td>死亡5回合后自动复活，不受异常状态影响，但也不能使用药品和食物恢复气血（可以食用包子）</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/24.jpg" alt=""></td>
+                            <td>魔之心</td>
+                            <td>对敌人的法术伤害效果提高10%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/25.jpg" alt=""></td>
+                            <td>神佑复生</td>
+                            <td>战斗死亡时有20%的几率复活，并恢复60%的气血，如果同时拥有鬼魂术（普通或高级），神佑复生的效果将取消</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/26.jpg" alt=""></td>
+                            <td>精神集中</td>
+                            <td>精神集中，可以抵御封类异常状态，但自己的物理攻击效果也会降低20%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/27.jpg" alt=""></td>
+                            <td>否定信仰</td>
+                            <td>不受异常、辅助效果影响，受到鬼魂类怪物攻击时伤害增加20%，不能同时拥有某些信仰类技能</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/28.jpg" alt=""></td>
+                            <td>雷击</td>
+                            <td>雷属性的攻击法术，按召唤兽等级附加一定的法术伤害</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/29.jpg" alt=""></td>
+                            <td>落岩</td>
+                            <td>土属性的攻击法术，按召唤兽等级附加一定的法术伤害</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/30.jpg" alt=""></td>
+                            <td>水攻</td>
+                            <td>水属性的攻击法术，按召唤兽等级附加一定的法术伤害</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/31.jpg" alt=""></td>
+                            <td>烈火</td>
+                            <td>火属性的攻击法术，按召唤兽等级附加一定的法术伤害</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/32.jpg" alt=""></td>
+                            <td>法术连击</td>
+                            <td>使用法术攻击目标时会有一定几率出现连续2次攻击敌人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/33.jpg" alt=""></td>
+                            <td>法术暴击</td>
+                            <td>使用法术攻击目标时会有一定几率使法术伤害值加倍</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/34.jpg" alt=""></td>
+                            <td>法术波动</td>
+                            <td>使用法术攻击目标时伤害在原有伤害值基础上会有大幅度的波动</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/35.jpg" alt=""></td>
+                            <td>雷属性吸收</td>
+                            <td>50%的几率免受雷属性法术伤害，并按应受伤害的大小恢复气血，但受到土属性法术攻击时伤害会增加30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/36.jpg" alt=""></td>
+                            <td>土属性吸收</td>
+                            <td>50%的几率免受土属性法术伤害，并按应受伤害的大小恢复气血，但受到雷属性法术攻击时伤害会增加30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/37.jpg" alt=""></td>
+                            <td>火属性吸收</td>
+                            <td>50%的几率免受火属性法术伤害，并按应受伤害的大小恢复气血，但受到水属性法术攻击时伤害会增加30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/38.jpg" alt=""></td>
+                            <td>水属性吸收</td>
+                            <td>50%的几率免受水属性法术伤害，并按应受伤害的大小恢复气血，但受到火属性法术攻击时伤害会增加30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/39.jpg" alt=""></td>
+                            <td>法术抵抗</td>
+                            <td>减少5%所受的法术伤害，但同时物理伤害能力减少10%。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/40.jpg" alt=""></td>
+                            <td>盾气</td>
+                            <td>第2回合及以后进入战斗时临时增加自身等级*1的防御，此后每回合减少等级*0.2的防御，持续5回合。（拥有隐身、高级隐身时盾气失效。不受永恒影响。可被魂飞魄散驱散。） </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/41.jpg" alt=""></td>
+                            <td>合纵</td>
+                            <td>本方每有一种与其不同的召唤兽，则提高其等级/5.5的物理伤害结果。同时，被封印几率增加10%。</td>
+                            <td></td>
+                        </tr>
+                        
+                         <tr>
+                            <td><img src="img/113.jpg" alt=""></td>
+                            <td>法术反震</td>
+                            <td>受到法术攻击时：30%反震对方，反震伤害为你所受伤害的25%。</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="target tab-target">
+                    <h2>召唤兽弱点技能列表</h2>
+                    <table>
+                        <tr>
+                            <th width="128">图标</th>
+                            <th width="150">名称</th>
+                            <th>效果</th>
+                            <th width="240">描述</th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/42.jpg" alt=""></td>
+                            <td>弱点雷</td>
+                            <td>弱点为雷，受到雷属性法术攻击时伤害增加50%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/43.jpg" alt=""></td>
+                            <td>弱点土</td>
+                            <td>弱点为土，受到土属性法术攻击时伤害增加50%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/44.jpg" alt=""></td>
+                            <td>弱点水</td>
+                            <td>弱点为水，受到水属性法术攻击时伤害增加50%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/45.jpg" alt=""></td>
+                            <td>弱点火</td>
+                            <td>弱点为火，受到火属性法术攻击时伤害增加50%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/46.jpg" alt=""></td>
+                            <td>迟钝</td>
+                            <td>天生行动缓慢，速度效果会降低20%</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="target tab-target">
+                    <h2>召唤兽高级技能列表</h2>
+                    <table>
+                        <tr>
+                            <th width="128">图标</th>
+                            <th width="150">名称</th>
+                            <th>效果</th>
+                            <th width="240">描述</th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/47.jpg" alt=""></td>
+                            <td>高级反击</td>
+                            <td>受到物理攻击时有30%几率自动反击，反击的伤害与正常攻击相同</td>
+                            <td>以眼还眼，以牙还牙。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/48.jpg" alt=""></td>
+                            <td>高级反震</td>
+                            <td>受到物理攻击时有30%几率给予对方反震，反震伤害为所受伤害的50%</td>
+                            <td>让冒犯者付出足够的代价。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/49.jpg" alt=""></td>
+                            <td>高级吸血</td>
+                            <td>物理攻击时，吸取对方所掉气血的30%, 攻击鬼魂类怪物时无效</td>
+                            <td>智将食于敌，以战养战。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/50.jpg" alt=""></td>
+                            <td>高级连击</td>
+                            <td>55%的几率连续两次物理攻击，拥有此技能物理攻击效果会降低20%，如果对方有反震技能，只能攻击一次</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/51.jpg" alt=""></td>
+                            <td>高级飞行</td>
+                            <td>躲避能力增加30%、躲避率增加10%，物理攻击命中几率增加20%</td>
+                            <td>居高临下，攻守兼备。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/52.jpg" alt=""></td>
+                            <td>高级夜战</td>
+                            <td>具备夜战能力，不受夜间攻击能力下降的影响，夜间躲避能力提高20%</td>
+                            <td>我在黑夜中战斗，只为结束这黑夜。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/53.jpg" alt=""></td>
+                            <td>高级隐身</td>
+                            <td> 	自动附加地府修罗隐身法术3～5回合，拥有此技能物理攻击能力会降低15%，隐身状态下无法使用法术</td>
+                            <td>隐藏自己才能更好地消灭敌人。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/54.jpg" alt=""></td>
+                            <td>高级感知</td>
+                            <td>破解地府的修罗隐身、女儿村的楚楚可怜法术效果，躲避能力提高10%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/55.jpg" alt=""></td>
+                            <td>高级再生</td>
+                            <td>战斗中每回合自动恢复气血，恢复数值与自身等级相同</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/56.jpg" alt=""></td>
+                            <td>高级冥思</td>
+                            <td>战斗中每回合自动恢复(自身等级/3)的魔法</td>
+                            <td>从战斗中学习，获得更多战斗能力。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/57.jpg" alt=""></td>
+                            <td>高级慧根</td>
+                            <td>使用法术时所消耗的魔法降低为正常的50%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/58.jpg" alt=""></td>
+                            <td>高级必杀</td>
+                            <td>物理攻击时的必杀几率增加20%，出现必杀时伤害结果会加倍</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/59.jpg" alt=""></td>
+                            <td>高级幸运</td>
+                            <td>不会受到必杀攻击，并有5%几率躲避敌人的法术攻击</td>
+                            <td>避免不幸就是幸运。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/60.jpg" alt=""></td>
+                            <td>高级神迹</td>
+                            <td>不受除日月乾坤外的所有异常状态影响</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/61.jpg" alt=""></td>
+                            <td>高级招架</td>
+                            <td>每回合受到的物理伤害结果减免20%（原躲避普通攻击的能力则取消）；若对方有高级强力，则高级招架技能的减免伤害效果无效。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/62.jpg" alt=""></td>
+                            <td>高级永恒</td>
+                            <td>受到的辅助类法术效果持续回合数×4</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/63.jpg" alt=""></td>
+                            <td>高级敏捷</td>
+                            <td>提升自身速度的20%</td>
+                            <td>兵贵神速。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/64.jpg" alt=""></td>
+                            <td>高级强力</td>
+                            <td>增加(自身等级×0.55)的攻击，如果对方有防御或高级防御技能，伤害结果会减少20%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/65.jpg" alt=""></td>
+                            <td>高级防御</td>
+                            <td>增加(自身等级×0.8)的防御，但法术伤害能力会降低10%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/66.jpg" alt=""></td>
+                            <td>高级偷袭</td>
+                            <td>身手灵敏，不会受到反击和反震，物理攻击效果提高10%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/67.jpg" alt=""></td>
+                            <td>高级毒</td>
+                            <td>自身对毒免疫，物理攻击时有20%的几率使敌人中毒，中毒后每回合减少10%的气血和5%的魔法</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/68.jpg" alt=""></td>
+                            <td>高级驱鬼</td>
+                            <td>对鬼魂类怪物的物理、法术伤害效果加倍，如果将鬼魂类怪物打死，对方将飞出场外而不能复活</td>
+                            <td>驱鬼克鬼魂，一物降一物。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/69.jpg" alt=""></td>
+                            <td>高级鬼魂术</td>
+                            <td>死亡5回合后自动复活，不受异常状态影响</td>
+                            <td>这些东西。。。是特殊材料做的吧！</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/70.jpg" alt=""></td>
+                            <td>高级魔之心</td>
+                            <td>对敌人的法术伤害效果提高20%</td>
+                            <td>强大的法术来自强大的内心</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/71.jpg" alt=""></td>
+                            <td>高级神佑复生</td>
+                            <td>战斗死亡时有30%的几率复活为正常状态，如果同时拥有鬼魂术（普通或高级），神佑复生的效果将取消。</td>
+                            <td>受神灵保佑起死回生的，就别太固执了！</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/72.jpg" alt=""></td>
+                            <td>高级精神集中</td>
+                            <td>精神集中，可以抵御封类异常状态，躲避力提高10%，但物理攻击能力会降低20%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/73.jpg" alt=""></td>
+                            <td>高级否定信仰</td>
+                            <td>不受异常、辅助效果影响，受法术伤害减少20%，受到鬼魂类怪物攻击时伤害增加20%，不能同时拥有某些信仰类技能</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/74.jpg" alt=""></td>
+                            <td>奔雷咒</td>
+                            <td>雷属性的攻击法术，按召唤兽等级附加一定的法术伤害，攻击人数为(自身等级/30+1)，最多为3人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/75.jpg" alt=""></td>
+                            <td>泰山压顶</td>
+                            <td>土属性的攻击法术，按召唤兽等级附加一定的法术伤害，攻击人数为(自身等级/30+1)，最多为3人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/76.jpg" alt=""></td>
+                            <td>水漫金山</td>
+                            <td>水属性的攻击法术，按召唤兽等级附加一定的法术伤害，攻击人数为(自身等级/30+1)，最多为3人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/77.jpg" alt=""></td>
+                            <td>地狱烈火</td>
+                            <td>火属性的攻击法术，按召唤兽等级附加一定的法术伤害，攻击人数为(自身等级/30+1)，最多为3人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/78.jpg" alt=""></td>
+                            <td>高级雷属性吸收 	</td>
+                            <td>50%的几率免受雷属性法术伤害，并按应受伤害的大小恢复气血，吸收失败也可减少法术伤害的30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/79.jpg" alt=""></td>
+                            <td>高级土属性吸收</td>
+                            <td>50%的几率免受土属性法术伤害，并按应受伤害的大小恢复气血，吸收失败也可减少法术伤害的30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/80.jpg" alt=""></td>
+                            <td>高级火属性吸收</td>
+                            <td>50%的几率免受火属性法术伤害，并按应受伤害的大小恢复气血，吸收失败也可减少法术伤害的30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/81.jpg" alt=""></td>
+                            <td>高级水属性吸收</td>
+                            <td>50%的几率免受水属性法术伤害，并按应受伤害的大小恢复气血，吸收失败也可减少法术伤害的30%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/82.jpg" alt=""></td>
+                            <td>高级法术连击</td>
+                            <td>使用法术攻击目标时会有较大几率出现连续2次攻击敌人</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/83.jpg" alt=""></td>
+                            <td>高级法术暴击</td>
+                            <td>使用法术攻击目标时会有较大几率使法术伤害值加倍</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/84.jpg" alt=""></td>
+                            <td>高级法术波动</td>
+                            <td>使用法术攻击目标时伤害在原有伤害值基础上会有较大幅度的上下波动</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/85.jpg" alt=""></td>
+                            <td>移花接木</td>
+                            <td>可以躲避暗器伤害，并按应受伤害的30%恢复HP。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/86.jpg" alt=""></td>
+                            <td>高级法术抵抗</td>
+                            <td>减少10%所受的法术伤害，但同时物理伤害能力减少10%。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/87.jpg" alt=""></td>
+                            <td>高级盾气</td>
+                            <td>第2回合及以后进入战斗时临时增加自身等级*2的防御，此后每回合减少等级*0.4的防御，持续5回合。（拥有隐身、高级隐身时盾气失效。不受永恒影响。可被魂飞魄散驱散。）</td>
+                            <td>死不足惧，只要有所为。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/88.jpg" alt=""></td>
+                            <td>高级合纵</td>
+                            <td>本方每有一种与其不同的召唤兽，则提高其等级/4的物理伤害结果。同时，被封印几率增加10%</td>
+                            <td></td>
+                        </tr>
+                        
+                         <tr>
+                            <td><img src="img/114.jpg" alt=""></td>
+                            <td>高级独行</td>
+                            <td>抵抗封印的能力提高50%；不会触发合击</td>
+                            <td></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+                <div class="target tab-target">
+                    <h2>召唤兽特殊技能列表</h2>
+                    <table>
+                        <tr>
+                            <th width="128">图标</th>
+                            <th width="150">名称</th>
+                            <th>效果</th>
+                            <th width="240">描述</th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/89.jpg" alt=""></td>
+                            <td>惊心一剑</td>
+                            <td>发动物理攻击攻击敌人，并按伤害HP的程度损害其MP。（物理伤害效果将略为降低）
+命中后，将在下一回合对敌人造成MP持续伤害。(持续效果不可叠加) </td>
+                            <td>打击敌人信念有时比直接打击更有效。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/90.jpg" alt=""></td>
+                            <td>死亡召唤</td>
+                            <td>攻击的同时有一定几率降低对手的气血上限；另有10%使敌人附加死亡禁锢效果，效果持续10回合，状态附加的角色在回合内无法被复活。</td>
+                            <td>没有机会，那我就自己创造！</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/91.jpg" alt=""></td>
+                            <td>善恶有报</td>
+                            <td>攻击时有一定几率给予对手造成双倍的伤害，也有可能为对方恢复一定气血</td>
+                            <td>不是不报，时候未到。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/92.jpg" alt=""></td>
+                            <td>上古灵符</td>
+                            <td>随机施展冰冻(水属性法术,降低对手气血，一定几率令对手停止行动1回合)、流沙(土属性法术，降低对手气血，一定几率降低对手10%愤怒)、心火(火属性法术，降低对手气血，一定几率降低对手上限5%的魔法)、怒雷(雷属性法术，降低对手气血)</td>
+                            <td>怒雷！冰冻！流沙！心火！听我号令！</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/93.jpg" alt=""></td>
+                            <td>力劈华山</td>
+                            <td>以强大的伤害力给敌人猛烈的攻击，命中临时提高LV*2+10</td>
+                            <td>狭路相逢，强者生存。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/94.jpg" alt=""></td>
+                            <td>夜舞倾城</td>
+                            <td>按自身力量点*1.5+自己速度/3对对方造成伤害。（攻击目标为人物时效果减半)。</td>
+                            <td>我可不止会蛮力。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/95.jpg" alt=""></td>
+                            <td>法术防御</td>
+                            <td>极强的法术防御技能。可以防御法术攻击，减少65%的法术伤害，但无法防御物理攻击。效果可以持续6回合。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/96.jpg" alt=""></td>
+                            <td>壁垒击破</td>
+                            <td>忽视防御的攻击。攻击的目标防御，则会受到更大伤害。用此技能攻击时，会忽视“高级防御”和“防御”这两个召唤兽技能产生的技能效果。</td>
+                            <td>没有什么能把我阻挡。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/97.jpg" alt=""></td>
+                            <td>嗜血追击</td>
+                            <td>使用物理攻击击倒目标时，会继续攻击另一个目标一次，此效果每回合只会触发一次</td>
+                            <td>宜将剩勇追穷寇。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/98.jpg" alt=""></td>
+                            <td>剑荡四方</td>
+                            <td>使用时可攻击多人。指定的目标受到一定伤害，并造成其他任意两个目标少量伤害。消耗:当前HP*10%。</td>
+                            <td>谁说用剑不能收割？</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/99.jpg" alt=""></td>
+                            <td>灵能激发</td>
+                            <td>启动后，临时提高自己的法术伤害能力。（法力点数越高效果越好，持续5回合）</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/100.jpg" alt=""></td>
+                            <td>法力陷阱</td>
+                            <td>召唤一个法力陷阱，持续到本回合结束。每个召唤进场的敌人都会触发陷阱，并损失大量MP和少量HP。但若从未触发，则自己损失大量HP。（同时自己物理、法术伤害能力减少5%，同队同时只能召唤1个陷阱）</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/101.jpg" alt=""></td>
+                            <td>八凶法阵</td>
+                            <td>超级赤焰兽专属技能，发动法术攻击3个敌人，并可能削弱其防御、伤害、速度、灵力。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/102.jpg" alt=""></td>
+                            <td>苍鸾怒击</td>
+                            <td>超级青鸾专属技能，当普通物理攻击发生必杀或连击时，临时提升10%伤害力随机攻击另外一目标，每回合最多触发一次，触发后下回合下降20%的伤害力和速度。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/103.jpg" alt=""></td>
+                            <td>从天而降</td>
+                            <td>超级神鸡专属技能，大大提高攻击时造成的伤害，但攻击时有一定几率腾空失败。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/104.jpg" alt=""></td>
+                            <td>大快朵颐</td>
+                            <td>超级神猴专属技能，出手前有一定几率触发，大大提升几率性技能（连击、必杀）的触发几率。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/105.jpg" alt=""></td>
+                            <td>浮云神马</td>
+                            <td>超级神马专属技能，在场时，提高自己及主人10%的速度，最多持续5回合。</td>
+                            <td>我觉得我跑得更快了！</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/106.jpg" alt=""></td>
+                            <td>灵山禅语</td>
+                            <td>增加自身魔力*（成长-0.3）的法防，魔力不再增加法伤，只增加一半的魔法。</td>
+                            <td>“灵山宝像，万法禅音。”</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/107.jpg" alt=""></td>
+                            <td>龙魂</td>
+                            <td>超级神龙专属技能，每成功使用三次法术都可以临时增加自身法术伤害。此效果可持续2回合，成功使用法术后状态消失。</td>
+                            <td>龙战于野，其血玄黄，不屈的龙魂任何人都无法忽视。</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/108.jpg" alt=""></td>
+                            <td>千钧一怒</td>
+                            <td>超级神羊专属技能，普通物理攻击造成的伤害≧目标气血伤害*10%时，使自己的主人获得10点愤怒。</td>
+                            <td>这是愤怒的力量！</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/109.jpg" alt=""></td>
+                            <td>天降灵葫</td>
+                            <td>超级土地公公专属技能，群体法术攻击，随机攻击1~（等级/30+2）取整个目标，最多5人。</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/110.jpg" alt=""></td>
+                            <td>无畏布施</td>
+                            <td>增加目标的防御、法防，但会降低自身的防御、法防。
+</td>
+                            <td>“我的就是你的，你的还是你的。”</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/111.jpg" alt=""></td>
+                            <td>须弥真言</td>
+                            <td>增加魔力*0.4的法术伤害力。</td>
+                            <td>“须弥圣言，佛光涤罪。”</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/112.jpg" alt=""></td>
+                            <td>月光</td>
+                            <td>超级玉兔专属技能，召唤(等级/30+1，最多4道）月光攻击敌人，同一个单位可以被多道月光攻击，后续月光只会造成50%的伤害。</td>
+                            <td>代表月亮之力，消灭你们这些大坏蛋。</td>
+                        </tr>
+                         <tr>
+                            <td><img src="img/115.jpg" alt=""></td>
+                            <td>津津有味</td>
+                            <td>每回合吞掉主人的一个包子，提高暴击几率和暴击伤害倍率。</td>
+                            <td>吃饱了才有力气揍小坏蛋！</td>  
+                        </tr>
+                        <tr>
+                            <td><img src="img/116.jpg" alt=""></td>
+                            <td>叱咤风云</td>
+                            <td>水系法术攻击目标和两个随机目标，提高法术连击的伤害；法术连击可重复触发。</td>
+                            <td>小白龙出世，这下敌人倒霉了！</td>  
+                        </tr>
+                         <tr>
+                            <td><img src="img/117.jpg" alt=""></td>
+                            <td>理直气壮</td>
+                            <td>普通攻击时，40%的几率攻击3次；但物理伤害效果降低20%。</td>
+                            <td>一声不够大？那就三声！</td>  
+                        </tr>
+                       <tr>
+                            <td><img src="img/118.jpg" alt=""></td>
+                            <td>食指大动</td>
+                            <td>召唤随机种类的水果攻击敌人。</td>
+                            <td>不同的水果味道不一，效果自然各具特色。</td>  
+                        </tr>
+                       <tr>
+                            <td><img src="img/119.jpg" alt=""></td>
+                            <td>凝光炼彩</td>
+                            <td>受伤时有25%概率获得护盾，护盾值为所受伤害的50%。</td>
+                            <td>宝石的光芒，是我的保护色。</td>  
+                        </tr>
+                         <tr>
+                            <td><img src="img/120.jpg" alt=""></td>
+                            <td>净台妙谛</td>
+                            <td>增加自身体质*成长*2的气血。</td>
+                            <td>静听妙谛，腾云护身。</td>  
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="comments" class="comments"></div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="http://act.yzz.cn/libs/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://comment.yzz.cn/index.php?c=comment&aid=952858&type=1" charset="utf-8"></script>
+    <!--Foot{-->
+    <script type="text/javascript" src="http://common.yzz.cn/home/no_ssp_footer.js" charset="gb2312"></script>
+    <script src="js/test2.js"></script>
+    <script>
+        /*
+         * tab
+         * */
+        var Tab = function(option){
+            var _this = this;
+            this.opt = option;
+            this.item = this.opt.el.find('.tab-item');
+            this.target = this.opt.el.find('.tab-target');
+            _this.turn(0);
+            this.item.on(this.opt.ev,function(){
+                var index = $(this).index();
+                _this.turn(index);
+            });
+        };
+
+        Tab.prototype = {
+            //turn
+            turn : function(i){
+                var _this = this;
+                var focus = _this.opt.fs;
+                _this.item.removeClass(focus).eq(i).addClass(focus);
+                _this.target.removeClass(focus).eq(i).addClass(focus);
+            }
+        };
+
+        Tab.init = function(option){
+            var _this = this;
+            option.el.each(function(){
+                new _this({
+                    'el' : $(this),
+                    'ev' : option.ev,
+                    'fs' : option.fs
+                });
+            });
+        };
+
+        Tab.init({
+            'el' : $('.tab'),   //切换组，父节点
+            'ev' : 'click',  //触发事件类型
+            'fs' : 'on'   //焦点类名
+        });
+    </script>
+    <div style="display: none;">
+        <script src='http://w.cnzz.com/c.php?id=30031075&l=3' language='JavaScript'></script>
+        <script src='http://w.cnzz.com/c.php?id=30030985&l=3' language='JavaScript'></script>
+    </div>
+</body>
+</html>

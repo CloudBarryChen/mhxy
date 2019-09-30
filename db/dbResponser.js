@@ -98,6 +98,39 @@ app.get('/bblist', function (req, res) {
   })
 })
 
+app.post('/bbmodel', urlencodedParser, function (req, res) {
+
+  // console.log(req.body);
+  // console.log(JSON.parse(req.body['abs'])); 
+  var bb = JSON.parse(req.body['obj']);
+  // console.log(bb)
+
+  if (bb.abilities.length !== 0) {
+    var newBB = new dbHelper.BBModel({
+      name: bb.bbName,
+      fiveElements: bb.bbFE, // 金 木 水 火 土
+      source: bb.source, //野生，宝宝，变异
+      certification: bb.certification,
+      abilities: bb.abilities,
+    })
+    newBB.save(function (err, res) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('-------------------------');
+        console.log('数据插入成功！');
+        console.log(res);
+        console.log('-------------------------');
+      }
+    })
+  }
+
+  res.end("数据插入成功！")
+  // console.log(url.parse(req.url).query);
+  // console.log(querystring.parse(url.parse(req.url).query));
+  // res.json(req.body)
+})
+
 /* app.post('/abs', urlencodedParser, function (req, res) {
   console.log("主頁GET請求");
   // console.log(req.body);

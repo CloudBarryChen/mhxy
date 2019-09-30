@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>梦幻打书辅助</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,9 +15,6 @@
         <h1>梦幻打书辅助</h1>
     </div>
     <div class="main">
-        <form>
-            <button type="button" id='sub'>提交</button>
-        </form>
         <div class="bbCollect">
             <p>BB名字：
                 <select name="bbName" id="bbName">
@@ -41,25 +40,51 @@
                 <select name="certification" id="certification">
                     <option value='false'>否</option>
                     <option value='true'>是</option>
-                </select></p>
-            <p>技能：
-         
-                    {{each abdata val indx}}
-                    <input type="checkbox" name="ablities" value="{{val.name}}">{{val.name}}
-                    <img src={{val.imgUrl}} alt="" srcset="">
-                    {{/each}}
-     
-
-                
+                </select>
+                <button type="button" id='sub'>提交数据</button>
             </p>
+            <div style="width: 60%;float: left;" id="abilityArea">技能：<br>
 
+                {{each abdata val indx}}
 
+                <a href="#"><img src={{val.imgUrl}} alt={{val.name}} srcset=""></a>
+
+                {{/each}}
+
+            </div>
+            <div style="width: 40%;float: left;">预览：
+                <button type="button" id='clearAbs'>清空技能</button>
+                <br>
+                <div class="panel" id="panel"></div>
+            </div>
         </div>
-        <ul>
-            {{each abdata val indx}}
-            <li>{{indx+1}}<span>{{val.name}}</span><img src={{val.imgUrl}} alt=""></li>
-            {{/each}}
-        </ul>
+        <div class="bbshow">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>BB名字</th>
+                        <th>五行</th>
+                        <th>是否宝宝</th>
+                        <th>是否认证</th>
+                        <th>技能</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{each bbmodeldata val indx}}
+                    <tr>
+                        <td>{{val.name}}</td>
+                        <td>{{val.fiveElements}}</td>
+                        <td>{{val.source}}</td>
+                        <td>{{val.certification}}</td>
+                        <td>
+                            {{val.abilities}}
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+        </div>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>

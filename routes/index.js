@@ -27,9 +27,18 @@ router.get('/', function (req, res) {
             // console.log(data);
             if (err) throw err;
             //var newdata = JSON.parse(data);
-            res.render('index.html', { 'bbdata': bbdata, 'abdata': abdata });
+
+            dbHelper.BBModel.find(function (err, bbmodeldata) {
+                // console.log(data);
+                if (err) throw err;
+                //var newdata = JSON.parse(data);
+                res.render('index.html', {
+                    'bbdata': bbdata, 'abdata': abdata, 'bbmodeldata': bbmodeldata
+                });
+            })
         })
     })
+
 
 
 })

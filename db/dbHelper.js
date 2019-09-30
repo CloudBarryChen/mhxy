@@ -20,8 +20,8 @@ var BBModel = mongoose.model('Bblist', {
     name: String,
     fiveElements: String, // 金 木 水 火 土
     source: String, //野生，宝宝，变异
-    cerification: Boolean,
-    ablities: Array,
+    certification: Boolean,
+    abilities: Array,
 })
 var bbsModel = mongoose.model('Bbs', {
     name: String,

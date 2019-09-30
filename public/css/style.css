@@ -1,0 +1,9 @@
+.panel {
+  width: 166px;
+  /* height: 124px; */
+  background: url('../images/panel.png') no-repeat top left;
+  padding: 12px 51px 0px 4px;
+}
+.panel img{
+  margin: 0 1px 0 0;
+}

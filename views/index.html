@@ -16,8 +16,47 @@
         <form>
             <button type="button" id='sub'>提交</button>
         </form>
+        <div class="bbCollect">
+            <p>BB名字：
+                <select name="bbName" id="bbName">
+                    {{each bbdata val indx}}
+                    <option value={{val.name}}>{{val.name}}</option>
+                    {{/each}}
+                </select>
+                五行：
+                <select name="bbFE" id="bbFE">
+                    <option value='金'>金</option>
+                    <option value='木'>木</option>
+                    <option value='水'>水</option>
+                    <option value='火'>火</option>
+                    <option value='土'>土</option>
+                </select>
+                是否宝宝：
+                <select name="source" id="source">
+                    <option value='宝宝'>宝宝</option>
+                    <option value='野生'>野生</option>
+                    <option value='变异'>变异</option>
+                </select>
+                是否认证：
+                <select name="certification" id="certification">
+                    <option value='false'>否</option>
+                    <option value='true'>是</option>
+                </select></p>
+            <p>技能：
+         
+                    {{each abdata val indx}}
+                    <input type="checkbox" name="ablities" value="{{val.name}}">{{val.name}}
+                    <img src={{val.imgUrl}} alt="" srcset="">
+                    {{/each}}
+     
+
+                
+            </p>
+
+
+        </div>
         <ul>
-            {{each data as val indx}}
+            {{each abdata val indx}}
             <li>{{indx+1}}<span>{{val.name}}</span><img src={{val.imgUrl}} alt=""></li>
             {{/each}}
         </ul>

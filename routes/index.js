@@ -32,6 +32,7 @@ router.get('/', function (req, res) {
                 // console.log(data);
                 if (err) throw err;
                 //var newdata = JSON.parse(data);
+                // console.log(bbmodeldata);
                 res.render('index.html', {
                     'bbdata': bbdata, 'abdata': abdata, 'bbmodeldata': bbmodeldata
                 });
@@ -42,5 +43,12 @@ router.get('/', function (req, res) {
 
 
 })
+
+function getAbImg(abName, abs) {
+    var imgUrl = abs.find(function (item) {
+        return item.name === abName;
+    }).imgUrl;
+    return imgUrl;
+}
 
 module.exports = router;

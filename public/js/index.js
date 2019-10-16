@@ -34,7 +34,7 @@ $('#bbName').change(function (e) {
 
 $('#sub').click(function (e) {
   if (confirm('确定提交数据？')) {
-    var abs = getAbs();
+    var abs = getAbs().abs;
     console.log(abs);
 
     var bbName = $('#bbName').val();

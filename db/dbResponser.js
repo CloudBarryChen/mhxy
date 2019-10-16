@@ -183,10 +183,10 @@ app.get('/bbsmatch', function (req, res) {
 })
 
 function checkAbs(existAbs, checkAbs, existName, checkName) {
-  if (checkName !== existName && checkName !== '') {
+  if (checkName === '' && checkAbs.length === 0) {
     return false;
   }
-  if (checkAbs.length === 0) {
+  if (checkName !== existName && checkName !== '') {
     return false;
   }
   for (let i = 0; i < checkAbs.length; i++) {
@@ -196,6 +196,18 @@ function checkAbs(existAbs, checkAbs, existName, checkName) {
     }
   }
   return true;
+
+  /* if (checkName !== existName && checkName !== '' && checkAbs.length === 0) {
+    return false;
+  }
+
+  for (let i = 0; i < checkAbs.length; i++) {
+
+    if ((checkAbs[i] !== existAbs[i || 0]) && (checkAbs[i] !== '空')) {
+      return false;
+    }
+  }
+  return true; */
 }
 
 //返回技能仓库

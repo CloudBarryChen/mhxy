@@ -36,6 +36,7 @@ router.get('/', function (req, res) {
                 res.render('index.html', {
                     'bbdata': bbdata, 'abdata': abdata, 'bbmodeldata': bbmodeldata
                 });
+               
             })
         })
     })

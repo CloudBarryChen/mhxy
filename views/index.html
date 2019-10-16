@@ -18,6 +18,7 @@
         <div class="bbCollect">
             <p>BB名字：
                 <select name="bbName" id="bbName">
+                    <option value=''></option>
                     {{each bbdata val indx}}
                     <option value={{val.name}}>{{val.name}}</option>
                     {{/each}}
@@ -58,6 +59,7 @@
                 <div class="panel" id="panel"></div>
             </div>
         </div>
+
         <div class="bbshow">
             <table style="width: 100%;">
                 <thead>
@@ -69,23 +71,8 @@
                         <th>技能</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {{each bbmodeldata val indx}}
-                    <tr>
-                        <td>{{val.name}}</td>
-                        <td>{{val.fiveElements}}</td>
-                        <td>{{val.source}}</td>
-                        <td>{{val.certification}}</td>
-                        <td>
-                            {{val.abilities}}      
-                        </td>
-                        <!-- <td>
-                            {{each val.abilities val indx}}
-                            <img src={{val.imgUrl}} alt={{val.name}}>
-                            {{/each}}
-                        </td> -->
-                    </tr>
-                    {{/each}}
+                <tbody id='inTable'>
+
                 </tbody>
 
             </table>

@@ -162,4 +162,44 @@ app.post('/bbmodel', urlencodedParser, function (req, res) {
   // res.json(req.body)
 }) */
 
+//返回符合条件的数据
+app.get('/bbsmatch', function (req, res) {
+
+  var obj = querystring.parse(url.parse(req.url).query)
+  obj.abs = JSON.parse(obj.abs);
+  console.log(obj)
+
+  dbHelper.BBModel.find(function (err, data) {
+    if (err) throw err;
+    // console.log(data);
+    var newData = data.filter((item) => {
+      return checkAbs(item.abilities, obj.abs);
+    })
+    // console.log(newData);
+    res.send(newData)
+  })
+
+
+})
+
+function checkAbs(existAbs, checkAbs) {
+  for (let i = 0; i < checkAbs.length; i++) {
+    if ((checkAbs[i] !== existAbs[i || 0]) && (checkAbs[i] !== '空')) {
+      return false;
+    }
+  }
+  return true;
+}
+
+//返回技能仓库
+app.get('/abslab', function (req, res) {
+
+  dbHelper.AbilityModel.find(function (err, data) {
+    if (err) throw err;
+    res.send(data)
+  })
+
+})
+
+
 module.exports = app;

@@ -21,6 +21,12 @@ $('#panel').click(function (e) {
 $('#clearAbs').click(function (e) {
 
   $('#panel img').remove();
+  // searchShow(getAbs());
+
+})
+
+$('#bbName').change(function (e) {
+
   searchShow(getAbs());
 
 })
@@ -70,23 +76,25 @@ $('#sub').click(function (e) {
 })
 
 //筛选数据 事件委托
-function searchShow(abs) {
+function searchShow(obj) {
+
 
   $.ajax({
     url: '/bbsmatch',
     data: {
-      abs: JSON.stringify(abs)
+      abs: JSON.stringify(obj.abs) || [],
+      name: obj.name
     },
     success: function (res) {
       // console.log(res)
-      var str = getAbsIcons(abs);
+      var str = getAbsIcons(obj.abs);
       var _html = `<tr>
-      <td></td>
+      <td>${obj.name}</td>
       <td></td>
       <td></td>
       <td></td>
       <td>
-        ${str}（你的）
+        ${str}<---（你的）
       </td>
   </tr>`;
       res.forEach(element => {
@@ -148,10 +156,11 @@ function getAbsIcons(abs) {
 
 function getAbs() {
   var abs = [];
+  var name = $('#bbName').val();
   $('#panel img').each(function (index, item) {
     abs.push(this.alt);
   })
-  return abs;
+  return { abs, name };
 }
 
 /* $('#searchRow').change(function (e) {

@@ -173,7 +173,7 @@ app.get('/bbsmatch', function (req, res) {
     if (err) throw err;
     // console.log(data);
     var newData = data.filter((item) => {
-      return checkAbs(item.abilities, obj.abs);
+      return checkAbs(item.abilities, obj.abs, item.name, obj.name);
     })
     // console.log(newData);
     res.send(newData)
@@ -182,8 +182,12 @@ app.get('/bbsmatch', function (req, res) {
 
 })
 
-function checkAbs(existAbs, checkAbs) {
+function checkAbs(existAbs, checkAbs, existName, checkName) {
+  if (checkName !== existName && checkName !== '') {
+    return false;
+  }
   for (let i = 0; i < checkAbs.length; i++) {
+
     if ((checkAbs[i] !== existAbs[i || 0]) && (checkAbs[i] !== '空')) {
       return false;
     }

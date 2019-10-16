@@ -186,6 +186,9 @@ function checkAbs(existAbs, checkAbs, existName, checkName) {
   if (checkName !== existName && checkName !== '') {
     return false;
   }
+  if (checkAbs.length === 0) {
+    return false;
+  }
   for (let i = 0; i < checkAbs.length; i++) {
 
     if ((checkAbs[i] !== existAbs[i || 0]) && (checkAbs[i] !== '空')) {

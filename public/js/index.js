@@ -21,6 +21,7 @@ $('#panel').click(function (e) {
 $('#clearAbs').click(function (e) {
 
   $('#panel img').remove();
+  $('#inTable').html('');
   // searchShow(getAbs());
 
 })
